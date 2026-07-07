@@ -19,4 +19,19 @@
     <color name="chip_warning_bg">#FFF4D6</color>
     <color name="chip_error_bg">#F9E0E0</color>
     <color name="chip_neutral_bg">#E5E9F0</color>
+
+    <!-- Gradient & aksen redesign -->
+    <color name="primary_light">#2E6DA4</color>
+    <color name="primary_glow">#3A82C4</color>
+
+    <color name="accent_blue">#2563EB</color>
+    <color name="accent_blue_bg">#E7EEFF</color>
+    <color name="accent_amber">#E67E22</color>
+    <color name="accent_amber_bg">#FDECDC</color>
+    <color name="accent_green">#16A34A</color>
+    <color name="accent_green_bg">#E4F6EA</color>
+    <color name="accent_purple">#7C3AED</color>
+    <color name="accent_purple_bg">#EFE7FE</color>
+
+    <color name="scrim_10">#1A000000</color>
 </resources>

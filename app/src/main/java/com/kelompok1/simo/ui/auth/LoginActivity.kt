@@ -25,6 +25,8 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        animateEntrance()
+
         binding.btnMasuk.setOnClickListener {
             viewModel.login(
                 binding.etEmail.text?.toString().orEmpty(),
@@ -36,6 +38,17 @@ class LoginActivity : AppCompatActivity() {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.state.collect { render(it) }
             }
+        }
+    }
+
+    private fun animateEntrance() {
+        binding.hero.alpha = 0f
+        binding.hero.animate().alpha(1f).setDuration(400).start()
+        listOf(binding.formCard, binding.demoCard).forEachIndexed { i, v ->
+            v.alpha = 0f
+            v.translationY = 60f
+            v.animate().alpha(1f).translationY(0f)
+                .setStartDelay(180L + i * 120).setDuration(480).start()
         }
     }
 

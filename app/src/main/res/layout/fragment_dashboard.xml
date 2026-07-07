@@ -8,122 +8,114 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:paddingBottom="24dp">
 
-            <TextView
-                android:id="@+id/tvGreeting"
-                android:layout_width="wrap_content"
+            <!-- Greeting gradient card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/greetingCard"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Halo"
-                android:textColor="@color/text_primary"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:layout_margin="16dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp">
 
-            <TextView
-                android:id="@+id/tvRole"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:background="@color/chip_neutral_bg"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="2dp"
-                android:text="-"
-                android:textColor="@color/primary"
-                android:textSize="12sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_greeting_card"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="20dp">
 
-            <!-- Baris 1 kartu -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Selamat datang,"
+                            android:textColor="#CFE0F0"
+                            android:textSize="13sp" />
+                        <TextView
+                            android:id="@+id/tvGreeting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pengguna"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/tvRole"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_chip_role"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="4dp"
+                            android:text="-"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:alpha="0.9"
+                        android:src="@drawable/ic_dashboard"
+                        app:tint="#66FFFFFF"
+                        android:contentDescription="dashboard" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Stat cards 2x2 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="16dp"
                 android:orientation="horizontal">
 
-                <com.google.android.material.card.MaterialCardView
-                    style="@style/Widget.SIMO.Card"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginEnd="6dp">
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                        android:orientation="vertical" android:padding="14dp">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Kontrak Aktif" android:textColor="@color/text_secondary" android:textSize="12sp" />
-                        <TextView android:id="@+id/tvKontrakAktif" android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="0"
-                            android:textColor="@color/primary" android:textSize="28sp" android:textStyle="bold" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                <include layout="@layout/view_stat_card" android:id="@+id/cardKontrak"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginEnd="6dp" />
 
-                <com.google.android.material.card.MaterialCardView
-                    style="@style/Widget.SIMO.Card"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginStart="6dp">
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                        android:orientation="vertical" android:padding="14dp">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Tagihan Menunggu" android:textColor="@color/text_secondary" android:textSize="12sp" />
-                        <TextView android:id="@+id/tvTagihanMenunggu" android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="0"
-                            android:textColor="@color/secondary" android:textSize="28sp" android:textStyle="bold" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                <include layout="@layout/view_stat_card" android:id="@+id/cardTagihan"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginStart="6dp" />
             </LinearLayout>
 
-            <!-- Baris 2 kartu -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="12dp"
                 android:orientation="horizontal">
 
-                <com.google.android.material.card.MaterialCardView
-                    style="@style/Widget.SIMO.Card"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginEnd="6dp">
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                        android:orientation="vertical" android:padding="14dp">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Total Biaya Final" android:textColor="@color/text_secondary" android:textSize="12sp" />
-                        <TextView android:id="@+id/tvTotalBiaya" android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Rp0"
-                            android:textColor="@color/success" android:textSize="18sp" android:textStyle="bold" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                <include layout="@layout/view_stat_card" android:id="@+id/cardBiaya"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginEnd="6dp" />
 
-                <com.google.android.material.card.MaterialCardView
-                    style="@style/Widget.SIMO.Card"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginStart="6dp">
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                        android:orientation="vertical" android:padding="14dp">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Sinkronisasi Terakhir" android:textColor="@color/text_secondary" android:textSize="12sp" />
-                        <TextView android:id="@+id/tvStatusSync" android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="-"
-                            android:textColor="@color/text_primary" android:textSize="14sp" android:textStyle="bold" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                <include layout="@layout/view_stat_card" android:id="@+id/cardSync"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginStart="6dp" />
             </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
                 android:layout_marginTop="24dp"
                 android:text="Aktivitas Terbaru"
                 android:textColor="@color/text_primary"
-                android:textSize="16sp"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
             <ProgressBar
@@ -147,6 +139,7 @@
                 android:id="@+id/rvAktivitas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="8dp"
                 android:nestedScrollingEnabled="false" />
         </LinearLayout>

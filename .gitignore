@@ -5,6 +5,9 @@ build/
 local.properties
 *.keystore
 *.jks
+.supabase_db_password.txt
+.env
+supabase/.temp/
 .DS_Store
 captures/
 .externalNativeBuild/

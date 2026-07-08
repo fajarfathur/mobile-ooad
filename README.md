@@ -9,7 +9,3 @@ Aplikasi Android ini digunakan oleh internal Kru PT KAI (Masinis, Konduktor) unt
 - Anggota 4 Adrian [Link Github](https://github.com/adrianAsh199)
 
 ## Use Case Diagram Gambaran Proyek
-![Use Case Diagram](diagrams/use-case-simo-mobile.png)
-![Use Case Diagram](diagrams/sistem-pelatihan.png)
-![Use Case Diagram](diagrams/sistem-penggajian.png)
-![Use Case Diagram](diagrams/sistem-presensi.png)

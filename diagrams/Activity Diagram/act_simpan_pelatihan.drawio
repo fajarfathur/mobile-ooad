@@ -1,0 +1,72 @@
+<mxfile host="65bd71144e">
+    <diagram name="act_simpan_pelatihan" id="d0">
+        <mxGraphModel dx="1044" dy="584" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="SIMO" style="swimlane;horizontal=1;startSize=44;html=1;fillColor=none;strokeColor=#000000;fontStyle=1;align=center;verticalAlign=middle;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry width="240" height="884" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Basis Data" style="swimlane;horizontal=1;startSize=44;html=1;fillColor=none;strokeColor=#000000;fontStyle=1;align=center;verticalAlign=middle;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="240" width="260" height="884" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="ellipse;fillColor=#000000;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="105" y="89" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Siapkan data kompetensi" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="196" width="180" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Kirim perintah simpan" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="316" width="180" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Tulis dan indeks data" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="270" y="436" width="180" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Berhasil?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="295" y="544" width="130" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Terima konfirmasi" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="676" width="180" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Catat error, ulangi" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="270" y="676" width="180" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="ellipse;fillColor=none;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="103" y="807" width="34" height="34" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="ellipse;fillColor=#000000;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="111" y="815" width="18" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;jettySize=auto;orthogonalLoop=1;fontFamily=Times New Roman;" parent="1" source="4" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;jettySize=auto;orthogonalLoop=1;fontFamily=Times New Roman;" parent="1" source="5" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;jettySize=auto;orthogonalLoop=1;fontFamily=Times New Roman;" parent="1" source="6" target="7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;jettySize=auto;orthogonalLoop=1;fontFamily=Times New Roman;" parent="1" source="7" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="Ya" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;jettySize=auto;orthogonalLoop=1;fontFamily=Times New Roman;" parent="1" source="8" target="9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="Tidak" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;jettySize=auto;orthogonalLoop=1;fontFamily=Times New Roman;" parent="1" source="8" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;jettySize=auto;orthogonalLoop=1;fontFamily=Times New Roman;" parent="1" source="10" target="7" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="470" y="704"/>
+                            <mxPoint x="470" y="464"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;jettySize=auto;orthogonalLoop=1;fontFamily=Times New Roman;" parent="1" source="9" target="11" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

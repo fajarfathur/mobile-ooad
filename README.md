@@ -45,6 +45,7 @@ Video mencakup:
 ## 🎥 Dokumentasi
 
 ### Dashboard Admin SAP ERP
+|Dashboard Cost Accounting | Dashboard Admin SAP ERP | 
 |:---:|:---:|
 | <img src="Dokumentasi/DashboardCostAccounting.jpg" alt="Alt Text" width="200"> | <img src="Dokumentasi/DashboardAdminSAPERP.jpg" alt="Alt Text" width="200"> |
 

@@ -605,17 +605,6 @@ Project ini mengimplementasikan prinsip-prinsip Object-Oriented Analysis and Des
 
 ---
 
-## 📱 Screenshots
-
-*(Screenshots akan ditambahkan setelah development complete)*
-
-```
-[Login Screen]          [CA Dashboard]        [Job List]
-[DJKA Verification]     [SAP Master Data]     [Detail Screen]
-```
-
----
-
 ## 🔐 Security & Best Practices
 
 ### Authentication & Authorization
@@ -655,7 +644,7 @@ Project ini mengimplementasikan prinsip-prinsip Object-Oriented Analysis and Des
 - **Fakultas:** Industri Kreatif
 - **Kelas:** TIF RP 24D CNS
 - **Mata Kuliah:** Pemrograman Mobile 1 (3 SKS)
-- **Dosen Pengampu:** Danny Aidil Rismayadi, S.SI., M.Kom.
+- **Dosen Pengampu:** Erryck Norrys, S.Kom.
 - **Tahun Akademik:** 2026
 - **Periode:** Ujian Akhir Semester (UAS)
 - **Deadline:** 09 Juli 2026 (Take Home)

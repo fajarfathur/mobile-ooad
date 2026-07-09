@@ -1,15 +1,3 @@
-# SIMO Mobile - Aplikasi Manajemen Kompetensi Pegawai PT KAI
-
-Aplikasi Android ini digunakan oleh internal Kru PT KAI (Masinis, Konduktor) untuk memantau validitas sertifikasi keselamatan kerja secara real-time.
-
-## Kelompok TIF RP 24D CNS
-- Anggota 1 Ahmad Kurnia ([Link Github](https://github.com/AhmadKurnia13))
-- Anggota 2 Mahesa Satria Darussalam ([Link Github](https://github.com/looplipop/)
-- Anggota 3 Fajar Fathurrohman [Link Github](https://github.com/fajarfathur)
-- Anggota 4 Adrian [Link Github](https://github.com/adrianAsh199)
-
-## Use Case Diagram Gambaran Proyek
-
 # SIMO — Sistem Infrastructure, Maintenance & Operation
 
 > **Aplikasi Mobile Android Native untuk PT Kereta API Indonesia (Persero)**  
@@ -673,10 +661,22 @@ Project ini mengimplementasikan prinsip-prinsip Object-Oriented Analysis and Des
 | 3 | Fajar Fathurrahman | 24552011198 | @fajar | - |
 | 4 | Mahesa Satriaa Darussalam | 24552011321 | @mahesa | - |
 
+## Kelompok TIF RP 24D CNS
+- Anggota 1 Ahmad Kurnia ([Link Github](https://github.com/AhmadKurnia13))
+- Anggota 2 Mahesa Satria Darussalam ([Link Github](https://github.com/looplipop/)
+- Anggota 3 Fajar Fathurrohman [Link Github](https://github.com/fajarfathur)
+- Anggota 4 Adrian [Link Github](https://github.com/adrianAsh199)
+
 ### 🔗 Links
 - **GitHub Repository:** https://github.com/Kelompok1/SIMO
 - **Video Penjelasan:** *(Coming Soon - YouTube Link)*
 - **Laporan OOAD:** `docs/Laporan_OOAD_SIMO_PT_KAI.pdf`
+
+📂 Dokumen Pendukung:
+📄 Laporan OOAD: https://drive.google.com/drive/folders/11f4NNs3oI-ub07ap0DEd2fTDY9K-7YtN?usp=sharing
+📸 Dokumentasi: https://drive.google.com/drive/folders/1EM4Q0Mb4UYHd5nc85Zu0k5xOlj9zc9Cl?usp=sharing
+
+## Use Case Diagram Gambaran Proyek
 
 ---
 
@@ -689,7 +689,7 @@ Project ini adalah **Prototipe Akademik** untuk keperluan UAS. Semua kode, dokum
 ## 🙏 Ucapan Terima Kasih
 
 Terima kasih kepada:
-- 🎓 **Danny Aidil Rismayadi, S.SI., M.Kom.** — Dosen Pengampu
+- 🎓 **Erryck Norrys, S.Kom.** — Dosen Pengampu
 - 🏫 **Universitas Teknologi Bandung** — Institusi Pendidikan
 - 👥 **Kelompok 1 TIF RP 24D CNS** — Tim Pengembang
 - 🚂 **PT Kereta API Indonesia** — Inspirasi Project

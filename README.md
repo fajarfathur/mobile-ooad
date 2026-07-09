@@ -33,7 +33,7 @@
 ## 🎥 Video Penjelasan Project
 
 **📺 [YouTube — Tonton Video Penjelasan Lengkap]**  
-*(Link akan diupdate setelah video di-upload)*
+*https://youtu.be/ASP6IvprVKM*
 
 Video mencakup:
 - ✅ Perkenalan semua anggota kelompok (wajah terlihat, peran masing-masing)
@@ -666,7 +666,7 @@ Project ini mengimplementasikan prinsip-prinsip Object-Oriented Analysis and Des
 
 ### 🔗 Links
 - **GitHub Repository:** https://github.com/Kelompok1/SIMO
-- **Video Penjelasan:** *(Coming Soon - YouTube Link)*
+- **Video Penjelasan:** *(https://youtu.be/ASP6IvprVKM)*
 - **Laporan OOAD:** `docs/Laporan_OOAD_SIMO_PT_KAI.pdf`
 
 📂 Dokumen Pendukung:

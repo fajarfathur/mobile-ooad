@@ -1,0 +1,95 @@
+<mxfile host="65bd71144e">
+    <diagram name="act_presensi" id="d0">
+        <mxGraphModel dx="1044" dy="584" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Cost Accounting" style="swimlane;horizontal=1;startSize=44;html=1;fillColor=none;strokeColor=#000000;fontStyle=1;align=center;verticalAlign=middle;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry width="240" height="1124" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="SIMO" style="swimlane;horizontal=1;startSize=44;html=1;fillColor=none;strokeColor=#000000;fontStyle=1;align=center;verticalAlign=middle;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="240" width="240" height="1124" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Sistem Presensi" style="swimlane;horizontal=1;startSize=44;html=1;fillColor=none;strokeColor=#000000;fontStyle=1;align=center;verticalAlign=middle;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="480" width="240" height="1124" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;jettySize=auto;orthogonalLoop=1;fontFamily=Times New Roman;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="4" source="12" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="120" y="872" as="sourcePoint"/>
+                        <mxPoint x="-30" y="360" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="120" y="900"/>
+                            <mxPoint x="220" y="900"/>
+                            <mxPoint x="220" y="360"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5" value="" style="ellipse;fillColor=#000000;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="105" y="89" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Jalankan sinkronisasi presensi" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="196" width="180" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Kirim permintaan data kehadiran" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="270" y="316" width="180" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Kirim data kehadiran pegawai" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="510" y="436" width="180" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Validasi &amp; transformasi data" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="270" y="556" width="180" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Data valid?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="295" y="664" width="130" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Simpan data presensi" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="270" y="796" width="180" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Catat error &amp; retry" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="510" y="796" width="180" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Lihat status sinkronisasi" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="916" width="180" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="ellipse;fillColor=none;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="343" y="1047" width="34" height="34" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="" style="ellipse;fillColor=#000000;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="351" y="1055" width="18" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;jettySize=auto;orthogonalLoop=1;fontFamily=Times New Roman;" parent="1" source="5" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;jettySize=auto;orthogonalLoop=1;fontFamily=Times New Roman;" parent="1" source="6" target="7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;jettySize=auto;orthogonalLoop=1;fontFamily=Times New Roman;" parent="1" source="7" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="360" y="410"/>
+                            <mxPoint x="600" y="410"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;jettySize=auto;orthogonalLoop=1;fontFamily=Times New Roman;" parent="1" source="8" target="9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;jettySize=auto;orthogonalLoop=1;fontFamily=Times New Roman;" parent="1" source="9" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Ya" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;jettySize=auto;orthogonalLoop=1;fontFamily=Times New Roman;" parent="1" source="10" target="11" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="Tidak" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;jettySize=auto;orthogonalLoop=1;fontFamily=Times New Roman;" parent="1" source="10" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;jettySize=auto;orthogonalLoop=1;fontFamily=Times New Roman;" parent="1" source="11" target="13" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;jettySize=auto;orthogonalLoop=1;fontFamily=Times New Roman;" parent="1" source="13" target="14" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

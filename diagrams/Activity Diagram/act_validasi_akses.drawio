@@ -1,0 +1,88 @@
+<mxfile host="65bd71144e">
+    <diagram name="act_validasi_akses" id="d0">
+        <mxGraphModel dx="1044" dy="584" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="SIMO" style="swimlane;horizontal=1;startSize=44;html=1;fillColor=none;strokeColor=#000000;fontStyle=1;align=center;verticalAlign=middle;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry width="240" height="884" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="SAP ERP (ESA)" style="swimlane;horizontal=1;startSize=44;html=1;fillColor=none;strokeColor=#000000;fontStyle=1;align=center;verticalAlign=middle;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="240" width="240" height="884" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Basis Data" style="swimlane;horizontal=1;startSize=44;html=1;fillColor=none;strokeColor=#000000;fontStyle=1;align=center;verticalAlign=middle;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="480" width="240" height="884" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="" style="ellipse;fillColor=#000000;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="105" y="89" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Terima token dari ESA" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="196" width="180" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Verifikasi keabsahan token" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="270" y="316" width="180" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Token valid?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="55" y="424" width="130" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Ambil data role pengguna" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="510" y="556" width="180" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Tetapkan hak akses (RBAC)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="676" width="180" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Tolak akses" style="rounded=1;whiteSpace=wrap;html=1;arcSize=22;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="556" width="180" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="ellipse;fillColor=none;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="103" y="807" width="34" height="34" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="" style="ellipse;fillColor=#000000;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="111" y="815" width="18" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;jettySize=auto;orthogonalLoop=1;fontFamily=Times New Roman;" parent="1" source="5" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;jettySize=auto;orthogonalLoop=1;fontFamily=Times New Roman;" parent="1" source="6" target="7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;jettySize=auto;orthogonalLoop=1;fontFamily=Times New Roman;" parent="1" source="7" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="Ya" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;jettySize=auto;orthogonalLoop=1;fontFamily=Times New Roman;" parent="1" source="8" target="9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="Tidak" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;jettySize=auto;orthogonalLoop=1;fontFamily=Times New Roman;" parent="1" source="8" target="11" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;jettySize=auto;orthogonalLoop=1;fontFamily=Times New Roman;" parent="1" source="10" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="120" y="820"/>
+                            <mxPoint x="120" y="820"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;jettySize=auto;orthogonalLoop=1;fontFamily=Times New Roman;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="11" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="120" y="610" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="20" y="584"/>
+                            <mxPoint x="20" y="824"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;jettySize=auto;orthogonalLoop=1;fontFamily=Times New Roman;" parent="1" source="9" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="640" y="620" as="sourcePoint"/>
+                        <mxPoint x="160" y="740" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="600" y="640"/>
+                            <mxPoint x="120" y="640"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

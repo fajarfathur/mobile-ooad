@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- anim_pulse.xml — ObjectAnimator untuk efek denyut pada stat cards -->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:ordering="sequentially">
+    <objectAnimator
+        android:propertyName="scaleX" android:valueTo="1.03"
+        android:duration="700" android:repeatCount="infinite"
+        android:repeatMode="reverse"
+        android:interpolator="@android:interpolator/fast_out_slow_in"/>
+</set>

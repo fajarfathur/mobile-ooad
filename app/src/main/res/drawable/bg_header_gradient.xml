@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
-    <gradient android:type="linear" android:angle="135"
-        android:startColor="@color/primary_variant"
-        android:centerColor="@color/primary"
-        android:endColor="@color/primary_glow" />
+<!-- bg_header_gradient v6 — Electric Blue to Deep Indigo -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:startColor="#3B5BDB"
+        android:endColor="#5C3BC5"
+        android:angle="135"
+        android:type="linear"/>
 </shape>

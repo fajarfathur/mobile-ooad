@@ -1,28 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Base.Theme.SIMO" parent="Theme.Material3.DayNight.NoActionBar">
+    <!-- Base Theme -->
+    <style name="Base.Theme.SIMO" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
-        <item name="colorPrimaryVariant">@color/primary_variant</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="colorSecondary">@color/secondary</item>
         <item name="colorOnSecondary">@color/white</item>
         <item name="android:colorBackground">@color/background</item>
         <item name="colorSurface">@color/surface</item>
         <item name="colorError">@color/error</item>
-        <item name="android:statusBarColor">@color/primary_variant</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/surface</item>
         <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+
+        <!-- Global corner radius untuk semua Widget -->
+        <item name="shapeAppearanceSmallComponent">@style/Shape.SIMO.Small</item>
+        <item name="shapeAppearanceMediumComponent">@style/Shape.SIMO.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/Shape.SIMO.Large</item>
+
+        <!-- Typography: Roboto/sans-serif -->
+        <item name="android:fontFamily">sans-serif</item>
     </style>
 
-    <style name="Theme.SIMO" parent="Base.Theme.SIMO" />
+    <style name="Theme.SIMO" parent="Base.Theme.SIMO"/>
 
-    <!-- Tombol utama: sudut 8dp -->
-    <style name="Widget.SIMO.Button" parent="Widget.Material3.Button">
-        <item name="cornerRadius">8dp</item>
+    <!-- ===== SHAPES ===== -->
+    <style name="Shape.SIMO.Small" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+    <style name="Shape.SIMO.Medium" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+    <style name="Shape.SIMO.Large" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">24dp</item>
     </style>
 
-    <!-- Card: sudut 12dp, elevasi 2dp -->
+    <!-- Nav Drawer Item -->
+    <style name="ShapeAppearance.NavItem" parent="ShapeAppearance.Material3.Corner.Full">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <!-- ===== TOOLBAR ===== -->
+    <style name="Widget.SIMO.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="titleTextColor">@color/white</item>
+        <item name="subtitleTextColor">#C7D2FE</item>
+        <item name="titleTextAppearance">@style/Text.SIMO.ToolbarTitle</item>
+    </style>
+    <style name="Text.SIMO.ToolbarTitle" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <!-- ===== NAVIGATION VIEW ===== -->
+    <style name="Widget.SIMO.NavigationView" parent="Widget.Material3.NavigationView">
+        <item name="itemShapeAppearance">@style/ShapeAppearance.NavItem</item>
+        <item name="itemShapeFillColor">@color/nav_item_selected_bg</item>
+        <item name="itemIconTint">@color/nav_item_color</item>
+        <item name="itemTextColor">@color/nav_item_color</item>
+        <item name="itemTextAppearance">@style/Text.SIMO.NavItem</item>
+    </style>
+    <style name="Text.SIMO.NavItem" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <!-- ===== CARD ===== -->
     <style name="Widget.SIMO.Card" parent="Widget.Material3.CardView.Elevated">
-        <item name="cardCornerRadius">12dp</item>
-        <item name="cardElevation">2dp</item>
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/divider</item>
+    </style>
+
+    <!-- ===== BUTTON ===== -->
+    <style name="Widget.SIMO.Button" parent="Widget.Material3.Button">
+        <item name="cornerRadius">14dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <!-- ===== TEXT INPUT ===== -->
+    <style name="Widget.SIMO.TextInput" parent="Widget.Material3.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/primary</item>
+        <item name="hintTextColor">@color/primary</item>
+        <item name="boxCornerRadiusTopStart">14dp</item>
+        <item name="boxCornerRadiusTopEnd">14dp</item>
+        <item name="boxCornerRadiusBottomStart">14dp</item>
+        <item name="boxCornerRadiusBottomEnd">14dp</item>
+    </style>
+
+    <!-- ===== BOTTOM SHEET ===== -->
+    <style name="Widget.SIMO.BottomSheet" parent="Widget.Material3.BottomSheet.Modal">
+        <item name="shapeAppearance">@style/Shape.SIMO.BottomSheet</item>
+    </style>
+    <style name="Shape.SIMO.BottomSheet" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">24dp</item>
+        <item name="cornerSizeTopRight">24dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+    <!-- Splash-->
+    <style name="Theme.SIMO.Splash" parent="Base.Theme.SIMO">
+        <item name="android:windowBackground">@drawable/bg_splash_gradient</item>
     </style>
 </resources>

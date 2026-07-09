@@ -27,6 +27,11 @@ class LoginActivity : AppCompatActivity() {
 
         animateEntrance()
 
+        // Tap demo pill → auto-fill dan langsung login
+        binding.demoCA.setOnClickListener { fillDemo("cost.accounting@simo.dev") }
+        binding.demoDJKA.setOnClickListener { fillDemo("otoritas.djka@simo.dev") }
+        binding.demoSAP.setOnClickListener { fillDemo("sap.erp@simo.dev") }
+
         binding.btnMasuk.setOnClickListener {
             viewModel.login(
                 binding.etEmail.text?.toString().orEmpty(),
@@ -56,6 +61,7 @@ class LoginActivity : AppCompatActivity() {
         val loading = state is LoginState.Loading
         binding.progress.visibility = if (loading) android.view.View.VISIBLE else android.view.View.GONE
         binding.btnMasuk.isEnabled = !loading
+        binding.btnMasuk.text = if (loading) "Memproses…" else "Masuk"
 
         when (state) {
             is LoginState.Success -> {
@@ -63,7 +69,15 @@ class LoginActivity : AppCompatActivity() {
                 finishAffinity()
             }
             is LoginState.Error -> {
-                Snackbar.make(binding.root, state.message, Snackbar.LENGTH_LONG)
+                val msg = when {
+                    state.message.contains("credentials", true) ||
+                    state.message.contains("password", true)    -> "❌ Email atau password salah. Pastikan menggunakan: demo123"
+                    state.message.contains("email", true)       -> "❌ Format email tidak valid"
+                    state.message.contains("network", true) ||
+                    state.message.contains("connect", true)     -> "❌ Tidak ada koneksi internet"
+                    else -> "❌ ${state.message}"
+                }
+                Snackbar.make(binding.root, msg, Snackbar.LENGTH_LONG)
                     .setBackgroundTint(getColor(R.color.error))
                     .setTextColor(getColor(R.color.white))
                     .show()
@@ -71,5 +85,12 @@ class LoginActivity : AppCompatActivity() {
             }
             else -> Unit
         }
+    }
+
+    private fun fillDemo(email: String) {
+        binding.etEmail.setText(email)
+        binding.etPassword.setText("demo123")
+        // Langsung login
+        viewModel.login(email, "demo123")
     }
 }

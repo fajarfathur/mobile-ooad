@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- bottom_sheet_chart_detail.xml — Detail chart saat bar di-tap -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/surface"
+    android:paddingBottom="40dp">
+
+    <!-- Handle bar -->
+    <View
+        android:layout_width="40dp" android:layout_height="4dp"
+        android:layout_gravity="center" android:layout_marginTop="12dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_handle_bar"/>
+
+    <!-- Header gradient -->
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="120dp"
+        android:background="@drawable/bg_header_gradient"
+        android:orientation="vertical" android:gravity="center"
+        android:paddingHorizontal="24dp">
+
+        <TextView android:id="@+id/tvDetailPeriode"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Detail Q1 — 2024"
+            android:textColor="#C7D2FE" android:textSize="13sp"/>
+        <TextView android:id="@+id/tvDetailNilai"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Rp 0 Jt"
+            android:textColor="@color/white" android:textSize="32sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Stats row -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:padding="20dp"
+        android:layout_marginTop="8dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:layout_marginEnd="8dp"
+            app:cardCornerRadius="16dp" app:cardElevation="0dp"
+            app:strokeWidth="1dp" app:strokeColor="@color/divider"
+            app:cardBackgroundColor="@color/primary_50">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Persentase" android:textColor="@color/primary"
+                    android:textSize="11sp" android:textStyle="bold"/>
+                <TextView android:id="@+id/tvDetailPersen"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="—%" android:textColor="@color/primary"
+                    android:textSize="24sp" android:textStyle="bold"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:layout_marginStart="8dp"
+            app:cardCornerRadius="16dp" app:cardElevation="0dp"
+            app:strokeWidth="1dp" app:strokeColor="@color/divider"
+            app:cardBackgroundColor="@color/surface">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Status" android:textColor="@color/text_secondary"
+                    android:textSize="11sp" android:textStyle="bold"/>
+                <TextView android:id="@+id/tvDetailStatus"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Normal" android:textColor="@color/text_primary"
+                    android:textSize="18sp" android:textStyle="bold"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+    <!-- Info breakdown dummy -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:paddingHorizontal="20dp">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Breakdown Kategori"
+            android:textColor="@color/text_primary" android:textSize="14sp"
+            android:textStyle="bold" android:layout_marginBottom="12dp"/>
+
+        <!-- Row items -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+            <View android:layout_width="10dp" android:layout_height="10dp"
+                android:background="@drawable/bg_dot_indigo"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_marginStart="10dp"
+                android:text="Biaya Pemeliharaan Jalan" android:textColor="@color/text_primary"
+                android:textSize="13sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="45%" android:textColor="@color/primary" android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+            <View android:layout_width="10dp" android:layout_height="10dp"
+                android:background="@drawable/bg_dot_green"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_marginStart="10dp"
+                android:text="Biaya Operasional" android:textColor="@color/text_primary"
+                android:textSize="13sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="30%" android:textColor="@color/accent_green" android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical">
+            <View android:layout_width="10dp" android:layout_height="10dp"
+                android:background="@drawable/bg_dot_amber"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_marginStart="10dp"
+                android:text="Biaya Aset Infrastruktur" android:textColor="@color/text_primary"
+                android:textSize="13sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="25%" android:textColor="@color/accent_amber" android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

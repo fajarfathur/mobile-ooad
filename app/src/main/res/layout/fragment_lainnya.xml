@@ -1,70 +1,305 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- fragment_lainnya v6 — Profil Monet Material You clean -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:background="@color/background"
+    android:scrollbars="none">
 
-    <com.google.android.material.card.MaterialCardView
-        style="@style/Widget.SIMO.Card"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
+        <!-- ===== HERO PROFIL ===== -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:background="@drawable/bg_header_gradient"
+            android:clipChildren="false">
+
+            <!-- Dekorasi blob -->
+            <View android:layout_width="160dp" android:layout_height="160dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="-50dp" android:layout_marginEnd="-50dp"
+                android:background="@drawable/bg_blob_white" android:alpha="0.08"/>
+
+            <!-- Content -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <!-- Avatar circle dengan edit button -->
+                <FrameLayout
+                    android:layout_width="96dp"
+                    android:layout_height="96dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardAvatar"
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        app:cardCornerRadius="30dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="#40FFFFFF"
+                        app:strokeWidth="2dp"
+                        app:cardBackgroundColor="#1AFFFFFF">
+                        <ImageView
+                            android:id="@+id/ivAvatar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_user"
+                            app:tint="#CCDCFF"
+                            android:scaleType="centerInside"
+                            android:padding="18dp"
+                            android:contentDescription="Foto Profil"/>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Edit FAB -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/btnEditPhoto"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_margin="2dp"
+                        app:cardCornerRadius="14dp"
+                        app:cardElevation="4dp"
+                        app:cardBackgroundColor="@color/white"
+                        android:clickable="true"
+                        android:focusable="true">
+                        <ImageView android:layout_width="14dp" android:layout_height="14dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_edit_photo"
+                            app:tint="@color/primary"
+                            android:contentDescription="Edit foto"/>
+                    </com.google.android.material.card.MaterialCardView>
+                </FrameLayout>
+
+                <!-- Nama -->
+                <TextView android:id="@+id/tvProfileNama"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="—" android:textColor="@color/white"
+                    android:textSize="22sp" android:textStyle="bold"
+                    android:letterSpacing="-0.01"/>
+
+                <!-- Email -->
+                <TextView android:id="@+id/tvProfileEmail"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="—" android:textColor="#99BFFF"
+                    android:textSize="13sp"/>
+
+                <!-- Role badge -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="13dp"
+                    app:cardBackgroundColor="#1EFFFFFF"
+                    app:strokeColor="#33FFFFFF"
+                    app:strokeWidth="1dp"
+                    app:cardElevation="0dp">
+                    <TextView android:id="@+id/tvProfileRole"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_gravity="center" android:paddingHorizontal="14dp"
+                        android:text="—" android:textColor="#DDEBFF"
+                        android:textSize="10sp" android:textStyle="bold"/>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- ===== CARDS SECTION ===== -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:paddingHorizontal="16dp"
+            android:paddingTop="20dp">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <!-- INFO AKUN -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Akun"
-                android:textColor="@color/text_secondary"
-                android:textSize="12sp" />
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/divider"
+                app:cardBackgroundColor="@color/surface">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="20dp">
 
-            <TextView
-                android:id="@+id/tvNama"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="-"
-                android:textColor="@color/text_primary"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Informasi Akun"
+                        android:textColor="@color/text_primary" android:textSize="14sp"
+                        android:textStyle="bold" android:letterSpacing="-0.01"
+                        android:layout_marginBottom="16dp"/>
 
-            <TextView
-                android:id="@+id/tvEmail"
-                android:layout_width="wrap_content"
+                    <!-- Unit row -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical">
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="40dp" android:layout_height="40dp"
+                            app:cardCornerRadius="13dp"
+                            app:cardBackgroundColor="@color/primary_50" app:cardElevation="0dp">
+                            <ImageView android:layout_width="20dp" android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_role"
+                                app:tint="@color/primary"
+                                android:contentDescription="unit"/>
+                        </com.google.android.material.card.MaterialCardView>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical"
+                            android:layout_marginStart="14dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Unit / Divisi"
+                                android:textColor="@color/text_tertiary" android:textSize="11sp"/>
+                            <TextView android:id="@+id/tvProfileUnit"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="—" android:textColor="@color/text_primary"
+                                android:textSize="14sp" android:textStyle="bold"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- INFO SISTEM -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="-"
-                android:textColor="@color/text_secondary"
-                android:textSize="13sp" />
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/divider"
+                app:cardBackgroundColor="@color/surface">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="20dp">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Informasi Sistem"
+                        android:textColor="@color/text_primary" android:textSize="14sp"
+                        android:textStyle="bold" android:letterSpacing="-0.01"
+                        android:layout_marginBottom="16dp"/>
+
+                    <!-- Versi -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:layout_marginBottom="14dp">
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="40dp" android:layout_height="40dp"
+                            app:cardCornerRadius="13dp"
+                            app:cardBackgroundColor="@color/card_green_soft" app:cardElevation="0dp">
+                            <ImageView android:layout_width="20dp" android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_verify"
+                                app:tint="@color/success"
+                                android:contentDescription="versi"/>
+                        </com.google.android.material.card.MaterialCardView>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical"
+                            android:layout_marginStart="14dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Versi Aplikasi"
+                                android:textColor="@color/text_tertiary" android:textSize="11sp"/>
+                            <TextView android:id="@+id/tvSistemVersion"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="SIMO v6.0 — Material You"
+                                android:textColor="@color/text_primary"
+                                android:textSize="13sp" android:textStyle="bold"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Supabase status -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical">
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="40dp" android:layout_height="40dp"
+                            app:cardCornerRadius="13dp"
+                            app:cardBackgroundColor="@color/primary_50" app:cardElevation="0dp">
+                            <ImageView android:layout_width="20dp" android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_sync"
+                                app:tint="@color/primary"
+                                android:contentDescription="db"/>
+                        </com.google.android.material.card.MaterialCardView>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical"
+                            android:layout_marginStart="14dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Database"
+                                android:textColor="@color/text_tertiary" android:textSize="11sp"/>
+                            <TextView android:id="@+id/tvSistemSupabase"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Supabase PostgreSQL"
+                                android:textColor="@color/primary"
+                                android:textSize="12sp" android:fontFamily="monospace"/>
+                        </LinearLayout>
+                        <!-- Status dot -->
+                        <View android:layout_width="8dp" android:layout_height="8dp"
+                            android:background="@drawable/bg_dot_green"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- DEMO CREDENTIALS -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/primary_50"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/primary_100">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="18dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:layout_marginBottom="10dp">
+                        <ImageView android:layout_width="14dp" android:layout_height="14dp"
+                            android:src="@drawable/ic_role" app:tint="@color/primary"
+                            android:layout_marginEnd="6dp" android:contentDescription="cred"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Akun Demo"
+                            android:textColor="@color/primary" android:textSize="13sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                    <TextView android:id="@+id/tvCredentials"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cost Accounting: cost.accounting@simo.dev&#10;DJKA: otoritas.djka@simo.dev&#10;SAP ERP: sap.erp@simo.dev&#10;Password: Simo@2024!"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11sp"
+                        android:fontFamily="monospace"
+                        android:lineSpacingExtra="5dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- LOGOUT -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="32dp"
+                android:text="Keluar dari Akun"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/error"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                app:strokeColor="@color/error"
+                app:strokeWidth="1.5dp"
+                app:cornerRadius="16dp"
+                app:icon="@drawable/ic_more"
+                app:iconTint="@color/error"
+                app:iconSize="18dp"/>
+
         </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
-
-    <TextView
-        android:id="@+id/tvVersi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="SIMO — Prototipe Akademik"
-        android:textColor="@color/text_secondary"
-        android:textSize="13sp" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnLogout"
-        android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:text="Logout"
-        android:textAllCaps="false"
-        android:textSize="16sp"
-        app:backgroundTint="@color/error"
-        app:cornerRadius="8dp" />
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

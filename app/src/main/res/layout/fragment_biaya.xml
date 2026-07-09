@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- fragment_biaya v6 — Material You Monet, konsisten penuh -->
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- HERO HEADER konsisten -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/bg_header_gradient"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            android:paddingHorizontal="20dp"
+            android:paddingBottom="28dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                app:cardCornerRadius="14dp"
+                app:cardBackgroundColor="#20FFFFFF"
+                app:cardElevation="0dp"
+                app:strokeColor="#25FFFFFF"
+                app:strokeWidth="1dp"
+                android:layout_marginBottom="14dp">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_cost"
+                    app:tint="#CCDCFF"
+                    android:contentDescription="biaya"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kalkulasi Biaya"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:letterSpacing="-0.02"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Pemeliharaan IMO · UC-09 &amp; UC-10"
+                android:textColor="#99BFFF"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <!-- STAT MINI floating -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            android:layout_marginTop="-28dp"
+            android:clipToPadding="false">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_marginEnd="5dp"
+                app:cardCornerRadius="18dp" app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/surface">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="14dp">
+                    <TextView android:id="@+id/tvHasilFilter"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="—" android:textColor="@color/success"
+                        android:textSize="18sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Pegawai Aktif" android:textColor="@color/text_secondary" android:textSize="10sp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_marginStart="5dp"
+                app:cardCornerRadius="18dp" app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/surface">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="14dp">
+                    <TextView android:id="@+id/tvTotalBiayaCalc"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="—" android:textColor="@color/primary"
+                        android:textSize="18sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Estimasi Biaya" android:textColor="@color/text_secondary" android:textSize="10sp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- PARAMETER KALKULASI -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="14dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/divider"
+            app:cardBackgroundColor="@color/surface">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="20dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="18dp">
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="36dp" android:layout_height="36dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardBackgroundColor="@color/card_green_soft" app:cardElevation="0dp">
+                        <ImageView android:layout_width="18dp" android:layout_height="18dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_cost"
+                            app:tint="@color/card_green"
+                            android:contentDescription="param"/>
+                    </com.google.android.material.card.MaterialCardView>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:layout_marginStart="12dp"
+                        android:text="Parameter Kalkulasi"
+                        android:textSize="15sp" android:textStyle="bold"
+                        android:textColor="@color/text_primary" android:letterSpacing="-0.01"/>
+                </LinearLayout>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Kontrak IMO"
+                    android:textSize="12sp" android:textColor="@color/text_secondary"
+                    android:layout_marginBottom="6dp"/>
+                <Spinner android:id="@+id/spinnerKontrak"
+                    android:layout_width="match_parent" android:layout_height="52dp"
+                    android:background="@drawable/bg_spinner_rounded"
+                    android:paddingHorizontal="14dp"
+                    android:layout_marginBottom="14dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Periode"
+                    android:textSize="12sp" android:textColor="@color/text_secondary"
+                    android:layout_marginBottom="6dp"/>
+                <Spinner android:id="@+id/spinnerPeriode"
+                    android:layout_width="match_parent" android:layout_height="52dp"
+                    android:background="@drawable/bg_spinner_rounded"
+                    android:paddingHorizontal="14dp"
+                    android:layout_marginBottom="14dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Bidang Kecakapan"
+                    android:textSize="12sp" android:textColor="@color/text_secondary"
+                    android:layout_marginBottom="6dp"/>
+                <Spinner android:id="@+id/spinnerBidang"
+                    android:layout_width="match_parent" android:layout_height="52dp"
+                    android:background="@drawable/bg_spinner_rounded"
+                    android:paddingHorizontal="14dp"
+                    android:layout_marginBottom="14dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Level Pegawai"
+                    android:textSize="12sp" android:textColor="@color/text_secondary"
+                    android:layout_marginBottom="6dp"/>
+                <Spinner android:id="@+id/spinnerLevel"
+                    android:layout_width="match_parent" android:layout_height="52dp"
+                    android:background="@drawable/bg_spinner_rounded"
+                    android:paddingHorizontal="14dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- TOMBOL HITUNG -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnHitung"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:text="Hitung Biaya Pemeliharaan"
+            android:textAllCaps="false"
+            android:textSize="15sp" android:textStyle="bold"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/success"
+            app:cornerRadius="16dp"
+            app:icon="@drawable/ic_cost"
+            app:iconTint="@color/white"
+            app:iconSize="18dp"
+            app:iconPadding="8dp"/>
+
+        <!-- HASIL KALKULASI -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardHasil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/card_green_soft"
+            app:cardBackgroundColor="@color/surface">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="20dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+                    <View android:layout_width="8dp" android:layout_height="8dp"
+                        android:background="@drawable/bg_dot_green"
+                        android:layout_marginEnd="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Hasil Kalkulasi"
+                        android:textColor="@color/success"
+                        android:textSize="13sp" android:textStyle="bold"/>
+                </LinearLayout>
+                <TextView android:id="@+id/tvHasilKalkulasi"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:fontFamily="monospace" android:textSize="13sp"
+                    android:textColor="@color/text_primary" android:lineSpacingExtra="6dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- EKSPOR -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEkspor"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Ekspor Laporan"
+            android:textAllCaps="false" android:textSize="14sp"
+            android:textStyle="bold"
+            app:cornerRadius="16dp"
+            app:strokeColor="@color/success"
+            app:strokeWidth="1.5dp"
+            android:textColor="@color/success"/>
+
+        <!-- INFO AKTOR -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="32dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/card_green_soft">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:padding="14dp" android:gravity="center_vertical">
+                <ImageView android:layout_width="14dp" android:layout_height="14dp"
+                    android:src="@drawable/ic_role" app:tint="@color/success"
+                    android:layout_marginEnd="8dp" android:contentDescription="aktor"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Aktor: Cost Accounting · SAP ERP — UC-09 · UC-10"
+                    android:textSize="11sp" android:textColor="@color/success"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

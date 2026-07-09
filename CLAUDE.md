@@ -23,7 +23,7 @@ SUPABASE_URL & SUPABASE_ANON_KEY disimpan di local.properties -> BuildConfig. JA
 
 ## Role & hak akses
 - cost_accounting: aktor utama, akses hampir semua modul operasional.
-- it_support: kelola user & role (RBAC) saja.
+- sap_erp: integrasi data master SDM, sinkronisasi, dan kelola aset infrastruktur.
 - djka: lihat & verifikasi tagihan saja.
 
 ## Desain

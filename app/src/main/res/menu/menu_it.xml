@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/nav_dashboard" android:icon="@drawable/ic_dashboard" android:title="Dashboard" />
-    <item android:id="@+id/nav_user" android:icon="@drawable/ic_user" android:title="User" />
-    <item android:id="@+id/nav_role" android:icon="@drawable/ic_role" android:title="Role" />
-    <item android:id="@+id/nav_lainnya" android:icon="@drawable/ic_more" android:title="Lainnya" />
-</menu>

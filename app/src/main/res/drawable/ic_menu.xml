@@ -1,0 +1,11 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp" android:height="24dp"
+    android:viewportWidth="24" android:viewportHeight="24">
+    <!-- Menu hamburger — 3 garis rounded modern -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M4,6 H20 V8 H4 V6Z"/>
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M4,11 H14 V13 H4 V11Z"/>
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M4,16 H17 V18 H4 V16Z"/>
+</vector>

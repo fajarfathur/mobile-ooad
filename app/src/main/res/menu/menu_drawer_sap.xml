@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Menu Drawer — SAP ERP -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_dashboard"
+            android:title="Dashboard" />
+        <item android:id="@+id/nav_aset"
+            android:icon="@drawable/ic_sync"
+            android:title="Aset Infrastruktur" />
+        <item android:id="@+id/nav_sinkronisasi"
+            android:icon="@drawable/ic_sync"
+            android:title="Sinkronisasi SAP ERP" />
+        <item android:id="@+id/nav_lainnya"
+            android:icon="@drawable/ic_user"
+            android:title="Profil &amp; Keluar" />
+    </group>
+</menu>

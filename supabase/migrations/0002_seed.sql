@@ -5,15 +5,15 @@
 
 -- Roles
 insert into roles (id, nama, deskripsi) values
-  ('11111111-1111-1111-1111-111111111111','cost_accounting','Aktor utama: kontrak, biaya, billing'),
-  ('22222222-2222-2222-2222-222222222222','it_support','Kelola user & role (RBAC)'),
-  ('33333333-3333-3333-3333-333333333333','djka','Verifikasi tagihan')
+  ('11111111-1111-1111-1111-111111111111','cost_accounting','Aktor utama: kontrak IMO, kalkulasi biaya, billing, dan hak akses'),
+  ('22222222-2222-2222-2222-222222222222','sap_erp','Integrasi data master, sinkronisasi, dan kelola aset infrastruktur'),
+  ('33333333-3333-3333-3333-333333333333','djka','Verifikasi tagihan dan monitoring status billing')
 on conflict (id) do nothing;
 
 -- App users (tautkan ke auth.users)
 insert into app_users (id, nama_lengkap, email, role_id, unit, is_active) values
   ('33a76041-4ee2-439d-b448-5474ada53ccd','Rina Kartika','costacc@demo.com','11111111-1111-1111-1111-111111111111','Cost Accounting', true),
-  ('fc316cb0-895b-4fd1-a557-23dc43163013','Budi Santoso','itsupport@demo.com','22222222-2222-2222-2222-222222222222','IT Support', true),
+  ('fc316cb0-895b-4fd1-a557-23dc43163013','Budi Santoso','sap@demo.com','22222222-2222-2222-2222-222222222222','SAP ERP', true),
   ('604ded59-4dec-4e49-8ee7-99f32ffa966b','Agus Wijaya','djka@demo.com','33333333-3333-3333-3333-333333333333','Otoritas DJKA', true)
 on conflict (id) do nothing;
 

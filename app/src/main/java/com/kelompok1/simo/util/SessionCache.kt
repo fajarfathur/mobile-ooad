@@ -24,7 +24,7 @@ class SessionCache @Inject constructor(
         get() = prefs.getString("email", null)
         set(v) = prefs.edit().putString("email", v).apply()
 
-    /** cost_accounting | it_support | djka */
+    /** cost_accounting | djka | sap_erp  — 3 aktor SIMO sesuai laporan OOAD */
     var roleName: String?
         get() = prefs.getString("role", null)
         set(v) = prefs.edit().putString("role", v).apply()

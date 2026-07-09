@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Menu SAP ERP — Aktor Sistem Integrasi -->
+<!-- SAP ERP mengelola data aset infrastruktur dan sinkronisasi data master -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_dashboard"     android:icon="@drawable/ic_dashboard" android:title="Dashboard" />
+    <item android:id="@+id/nav_aset"          android:icon="@drawable/ic_sync"      android:title="Aset" />
+    <item android:id="@+id/nav_sinkronisasi"  android:icon="@drawable/ic_sync"      android:title="Sinkronisasi" />
+    <item android:id="@+id/nav_lainnya"       android:icon="@drawable/ic_more"      android:title="Lainnya" />
+</menu>

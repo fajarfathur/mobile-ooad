@@ -178,17 +178,17 @@ alter table dokumen_pendukung enable row level security;
 alter table sync_log enable row level security;
 alter table audit_log enable row level security;
 
--- roles: semua user login boleh baca; it_support kelola penuh
+-- roles: semua user login boleh baca; cost_accounting kelola penuh
 create policy roles_select on roles for select to authenticated using (true);
-create policy roles_all_it on roles for all to authenticated
-  using (public.current_role_name() = 'it_support')
-  with check (public.current_role_name() = 'it_support');
+create policy roles_all_cost on roles for all to authenticated
+  using (public.current_role_name() = 'cost_accounting')
+  with check (public.current_role_name() = 'cost_accounting');
 
--- app_users: user login boleh baca (untuk nama pembuat/aktivitas); it_support kelola penuh
+-- app_users: user login boleh baca (untuk nama pembuat/aktivitas); cost_accounting kelola penuh
 create policy users_select on app_users for select to authenticated using (true);
-create policy users_all_it on app_users for all to authenticated
-  using (public.current_role_name() = 'it_support')
-  with check (public.current_role_name() = 'it_support');
+create policy users_all_cost on app_users for all to authenticated
+  using (public.current_role_name() = 'cost_accounting')
+  with check (public.current_role_name() = 'cost_accounting');
 
 -- Data operasional: semua user login boleh SELECT; tulis hanya cost_accounting
 do $$

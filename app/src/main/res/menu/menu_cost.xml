@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Menu Cost Accounting — Aktor Utama/Super Admin SIMO -->
+<!-- Hak akses & Role dikelola oleh Cost Accounting (bukan IT Support) -->
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/nav_dashboard" android:icon="@drawable/ic_dashboard" android:title="Dashboard" />
-    <item android:id="@+id/nav_kontrak" android:icon="@drawable/ic_contract" android:title="Kontrak" />
-    <item android:id="@+id/nav_biaya" android:icon="@drawable/ic_cost" android:title="Biaya" />
-    <item android:id="@+id/nav_billing" android:icon="@drawable/ic_billing" android:title="Billing" />
-    <item android:id="@+id/nav_lainnya" android:icon="@drawable/ic_more" android:title="Lainnya" />
+    <item android:id="@+id/nav_dashboard"  android:icon="@drawable/ic_dashboard" android:title="Dashboard" />
+    <item android:id="@+id/nav_kontrak"    android:icon="@drawable/ic_contract"  android:title="Kontrak" />
+    <item android:id="@+id/nav_biaya"      android:icon="@drawable/ic_cost"      android:title="Biaya" />
+    <item android:id="@+id/nav_billing"    android:icon="@drawable/ic_billing"   android:title="Billing" />
+    <item android:id="@+id/nav_hak_akses"  android:icon="@drawable/ic_role"      android:title="Hak Akses" />
+    <item android:id="@+id/nav_lainnya"    android:icon="@drawable/ic_more"      android:title="Lainnya" />
 </menu>

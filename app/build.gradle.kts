@@ -93,6 +93,12 @@ dependencies {
     // Glide
     implementation(libs.glide)
 
+    // Lottie animation
+    implementation(libs.lottie)
+
+    // Shimmer loading effect
+    implementation(libs.shimmer)
+
     // Test
     testImplementation(libs.junit)
     testImplementation(libs.kotlinx.coroutines.test)

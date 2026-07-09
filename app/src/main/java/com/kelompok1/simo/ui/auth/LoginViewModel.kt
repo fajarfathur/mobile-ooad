@@ -47,8 +47,8 @@ class LoginViewModel @Inject constructor(
         return when {
             msg.contains("Invalid login", true) ||
                 msg.contains("credentials", true) -> "Email atau password salah."
-            msg.contains("Hubungi IT Support", true) -> msg
-            msg.contains("nonaktif", true) -> msg
+            msg.contains("Hubungi Administrator", true) -> msg
+            msg.contains("belum terdaftar", true) -> msg
             msg.contains("network", true) ||
                 msg.contains("host", true) ||
                 msg.contains("timeout", true) -> "Gagal terhubung. Cek koneksi internet."

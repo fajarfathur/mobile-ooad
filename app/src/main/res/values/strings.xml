@@ -4,4 +4,6 @@
     <string name="app_full_name">SIMO — Sistem Infrastructure Maintenance &amp; Operation</string>
     <string name="app_tagline">Manajemen Kontrak IMO, Biaya Pemeliharaan &amp; Billing DJKA</string>
     <string name="label_prototipe">Prototipe Akademik</string>
+    <string name="nav_open">Buka Menu</string>
+    <string name="nav_close">Tutup Menu</string>
 </resources>

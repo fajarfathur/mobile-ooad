@@ -45,11 +45,8 @@ Video mencakup:
 ## 🎥 Dokumentasi
 
 ### Dashboard Admin SAP ERP
-<img src="Dokumentasi/DashboardCostAccounting.jpg" alt="Alt Text" width="200">
-
-![Admin SAP ERP](Dokumentasi/Dashboard Admin SAP ERP.jpg)
-### Billing dan Tagihan
-![Alt Text](Dokumentasi/Billing dan Tagihan.jpg)
+|:---:|:---:|
+| img src="Dokumentasi/DashboardCostAccounting.jpg" alt="Alt Text" width="200"> | <img src="Dokumentasi/DashboardAdminSAPERP.jpg" alt="Alt Text" width="200"> |
 
 
 ## ✨ Fitur Utama
